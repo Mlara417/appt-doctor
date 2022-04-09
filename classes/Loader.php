@@ -21,7 +21,7 @@ class Loader
 	{
 		wp_enqueue_script(
 			'plugin-react',
-			$this->pluginPath . 'build/index.js',
+			$this->pluginPath . '/build/index.js',
 			['wp-element'],
 			rand(), // Change this to null for production
 			true

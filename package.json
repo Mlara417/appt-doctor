@@ -1,11 +1,11 @@
 {
   "name": "appt-doctor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Schedule appointments",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "placeholder"
+    "url": "https://github.com/Mlara417/appt-doctor.git"
   },
   "author": "Moses Lara",
   "license": "MIT",
