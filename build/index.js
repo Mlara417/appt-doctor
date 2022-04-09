@@ -416,10 +416,35 @@ function getISOLocalDateTime(date) {
 
 /***/ }),
 
-/***/ "./classes/components/SchedulerCalendar.js":
-/*!*************************************************!*\
-  !*** ./classes/components/SchedulerCalendar.js ***!
-  \*************************************************/
+/***/ "./src/App.js":
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_SchedulerCalendar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/SchedulerCalendar */ "./src/components/SchedulerCalendar.js");
+
+
+
+
+const App = () => {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_SchedulerCalendar__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./src/components/SchedulerCalendar.js":
+/*!*********************************************!*\
+  !*** ./src/components/SchedulerCalendar.js ***!
+  \*********************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -436,8 +461,8 @@ __webpack_require__.r(__webpack_exports__);
 class SchedulerCalendar extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
   constructor() {
     super();
-    this.locale = 'en-US';
-    this.dateFormat = 'mm-dd-yyyy';
+    this.locale = "en-US";
+    this.dateFormat = "mm-dd-yyyy";
     this.date = new Date();
     this.handleClick = this.handleClick.bind(this);
   }
@@ -480,31 +505,6 @@ class SchedulerCalendar extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (SchedulerCalendar);
-
-/***/ }),
-
-/***/ "./src/App.js":
-/*!********************!*\
-  !*** ./src/App.js ***!
-  \********************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _classes_components_SchedulerCalendar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../classes/components/SchedulerCalendar */ "./classes/components/SchedulerCalendar.js");
-
-
-
-
-const App = () => {
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_classes_components_SchedulerCalendar__WEBPACK_IMPORTED_MODULE_2__["default"], null);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (App);
 
 /***/ }),
 
@@ -5226,9 +5226,9 @@ const {
 
 
 
-if (document.getElementById('react-calendar-wrapper')) {
+if (document.getElementById("react-calendar-wrapper")) {
   //check if element exists before rendering
-  render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_App__WEBPACK_IMPORTED_MODULE_1__["default"], null), document.getElementById('react-calendar-wrapper'));
+  render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_App__WEBPACK_IMPORTED_MODULE_1__["default"], null), document.getElementById("react-calendar-wrapper"));
 }
 }();
 /******/ })()

@@ -1,10 +1,7 @@
-import React, { Component } from 'react'
-import SchedulerCalendar from '../classes/components/SchedulerCalendar';
+import React, { Component } from "react";
+import SchedulerCalendar from "./components/SchedulerCalendar";
 
 const App = () => {
-
-	return (
-		<SchedulerCalendar />
-	);
-  };
-  export default App;
+  return <SchedulerCalendar />;
+};
+export default App;
