@@ -416,30 +416,37 @@ function getISOLocalDateTime(date) {
 
 /***/ }),
 
-/***/ "./src/App.js":
-/*!********************!*\
-  !*** ./src/App.js ***!
-  \********************/
+/***/ "./classes/components/SchedulerCalendar.js":
+/*!*************************************************!*\
+  !*** ./classes/components/SchedulerCalendar.js ***!
+  \*************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_calendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-calendar */ "./node_modules/react-calendar/dist/esm/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_calendar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-calendar */ "./node_modules/react-calendar/dist/esm/index.js");
 
 
 
-const App = () => {
-  const date = new Date();
-  const locale = 'en-US';
-  const dateFormat = 'mm-dd-yyyy';
 
-  function handleClick(date) {
-    console.log(dateFormatter(date, dateFormat));
+class SchedulerCalendar extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
+  constructor() {
+    super();
+    this.locale = 'en-US';
+    this.dateFormat = 'mm-dd-yyyy';
+    this.date = new Date();
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  function dateFormatter(inputDate, format) {
+  handleClick(date) {
+    console.log(this.dateFormatter(date, this.dateFormat));
+  }
+
+  dateFormatter(inputDate, format) {
     //parse the input date
     const date = new Date(inputDate); //extract the parts of the date
 
@@ -460,13 +467,41 @@ const App = () => {
     return format;
   }
 
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_calendar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    value: date,
-    locale: locale,
-    minDate: date,
-    maxDetail: "month",
-    onClickDay: handleClick
-  });
+  render() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_calendar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      value: this.date,
+      locale: this.locale,
+      minDate: this.date,
+      maxDetail: "month",
+      onClickDay: this.handleClick
+    });
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SchedulerCalendar);
+
+/***/ }),
+
+/***/ "./src/App.js":
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _classes_components_SchedulerCalendar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../classes/components/SchedulerCalendar */ "./classes/components/SchedulerCalendar.js");
+
+
+
+
+const App = () => {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_classes_components_SchedulerCalendar__WEBPACK_IMPORTED_MODULE_2__["default"], null);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
